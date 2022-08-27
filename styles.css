@@ -9,28 +9,25 @@ body {
     padding: 0;
     font-family: 'Open Sans',sans-serif;
     font-size: 1.5rem;
-    background-color: #e2e6ea;
+    background-color: #f1f5f9;
 }
 
 .grid-container {
-    min-height: 100vh;
+    max-height: 100vh;
     max-width: 100vw;
     display: grid;
-    grid-template-columns: .8fr 1fr 1fr 1fr;
-    grid-template-rows: .6fr 1fr 1fr 1fr;
-    grid-template-areas: 'sideNav mainHeader mainHeader mainHeader'
-    'sideNav main main main'
-    'sideNav main main main'
-    'sideNav main main main';
+    grid-template: 1fr 6fr/1fr 4fr;
+    
 }
 
 .sideBar {
-    grid-area: sideNav;
+  
     background-color: #00BBF3;
     color: white;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
+    grid-area: 1/1/4/2
     
 }
 .sideHeaderWrapper {
@@ -48,42 +45,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.header {
-    grid-area: mainHeader;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 'firstRow'
-    'secondRow';
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: white;
-
-}
-.firstRowWrapper {
-    grid-area: firstRow;
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-.actionsList {
-    display: flex;
-    justify-content: space-between;
-}
-
-.usernameWrapper , .actionsContainer {
-    width: 50%;
-}
-
-
-.actionsLinks {
-    list-style: none;
-    padding: 0;
-    border-radius: 1.4rem;
-    padding: 12px;
-    background-color: #00BBF3;
-    color: white;
-}
-
 .sideLinksList {
     display: flex;
     flex-direction: column;
@@ -96,39 +57,102 @@ body {
 }
 
 .sideLinks:hover {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid white;
 }
-.mainDisplay {
-    grid-area: main;
-    display: grid;
-    grid-template-rows: repeat(3,1fr);
-    grid-template-columns: repeat(3,1fr);
-    row-gap: 2rem;
-    column-gap: 2rem;
-    margin: 1.5rem 0 0 1.5rem;
+.header {
   
-}
-
-.searchBar {
- width: 70%;
- border-radius: 1rem;
- padding: 10px;
- background-color: #e2e6ea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    align-items: center;
+    grid-area: 1/2/2/4;
 
 }
-
-.secondRowWrapper {
+.firstRowWrapper {
     display: flex;
     justify-content: space-between;
-    grid-area: secondRow;
-    margin: 0 2rem;
+    margin: 0 50px 0 2rem;
 }
+
+.searchContainer {
+    width: 70%;
+}
+.searchBar {
+    width: 70%;
+    border-radius: 1rem;
+    padding: 10px;
+    background-color: #e2e6ea;
+   
+   }
+
+   .searchLogo {
+    position: relative;
+    top: 1rem;
+}
+   
+   .secondRowWrapper {
+       display: flex;
+       justify-content: space-between;
+       grid-area: secondRow;
+      
+   }
+.profileLogo,.trendingLogo {
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+}
+.actionsList {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.usernameWrapper , .actionsContainer {
+    width: 50%;
+}
+
+.usernameWrapper {
+    margin: 0 2.2rem;
+    display: flex;
+}
+
+.actionsLinks {
+    list-style: none;
+    padding: 0;
+    border-radius: 1.4rem;
+    padding: 14px;
+    background-color: #00BBF3;
+    color: white;
+    width: 120px;
+    text-align: center;
+}
+
+
+.mainDisplay {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.projectsSection {
+    grid-area: 1/1/3/3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-items: start;
+}
+
 .cardContainer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     background-color: white;
     border-radius: .5rem;
     border-left: 10px solid #AB276F;
-     
+    font-size: 1.3rem;
+    padding: 20px;
 }
 .cardBody, .cardHeader {
     text-align: center;
@@ -137,9 +161,7 @@ body {
     margin-bottom: 1rem;
     font-weight: 700;
 }
-.searchContainer {
-    width: 50%;
-}
+
 
 
 .cardFooter {
@@ -153,7 +175,31 @@ body {
     
 }
 
-.searchLogo {
-    position: relative;
-    top: 1rem;
+.announcementsContainer,.trendingContainer {
+ grid-column: 3;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+ background-color: white;
+ border-radius: .5rem;
+
+}
+
+.announcement {
+ 
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    margin: 1.5rem 1.5 1rem 0;
+
+}
+
+.trendingAccount {
+    display: flex;
+    border-bottom: 1px solid black;
+    margin: 1.5rem 0;
+
+}
+
+.usernameContainer {
+    display: flex;
+    flex-direction: column;
 }
