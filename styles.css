@@ -71,6 +71,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0 50px 0 2rem;
+    grid-row: 1;
 }
 
 .searchContainer {
@@ -92,7 +93,7 @@ body {
    .secondRowWrapper {
        display: flex;
        justify-content: space-between;
-       grid-area: secondRow;
+       grid-row: auto;
       
    }
 .profileLogo,.trendingLogo {
@@ -181,6 +182,12 @@ body {
 
 }
 
+.accountsContainer {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: .5rem;
+    
+}
 .announcement {
  
     display: flex;
@@ -204,4 +211,13 @@ body {
 .usernameContainer {
     display: flex;
     flex-direction: column;
+}
+
+.announcementsHeading, .trendingHeading {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.trendingHeading {
+    margin-bottom: 0;
 }
