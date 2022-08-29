@@ -155,7 +155,7 @@ body {
     padding: 20px;
 }
 .cardBody, .cardHeader {
-    text-align: center;
+    text-align: left;
 }
 .projectTitle {
     margin-bottom: 1rem;
@@ -177,9 +177,7 @@ body {
 
 .announcementsContainer,.trendingContainer {
  grid-column: 3;
- box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
- background-color: white;
- border-radius: .5rem;
+ 
 
 }
 
@@ -189,6 +187,9 @@ body {
     flex-direction: column;
     border-bottom: 1px solid black;
     margin: 1.5rem 1.5 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+ background-color: white;
+ border-radius: .5rem;
 
 }
 
@@ -196,6 +197,7 @@ body {
     display: flex;
     border-bottom: 1px solid black;
     margin: 1.5rem 0;
+    text-align: left;
 
 }
 
